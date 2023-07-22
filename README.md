@@ -3,8 +3,8 @@
 1. Install dependencies:
 cd frontend
 npm install
-
-2. Run the frontend app:
+2. Be sure the backend (https://github.com/juanechaparro/git-history-backend) is already running on localhost 3000.
+3. Run the frontend app:
 npm start
 
 
