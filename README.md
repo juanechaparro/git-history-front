@@ -1,3 +1,18 @@
+## Frontend (React)
+
+1. Install dependencies:
+cd frontend
+npm install
+
+2. Run the frontend app:
+npm start
+
+
+The app will open in your default browser at `http://localhost:5173/`.
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
