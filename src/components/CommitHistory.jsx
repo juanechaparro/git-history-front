@@ -1,23 +1,22 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { formatDate } from "../utils/fotmatDate";
+import useCommitHistory from "../hooks/useCommitHistory";
+import "./CommitHistory.css";
 
 const CommitHistory = () => {
-  const [commits, setCommits] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/git") // URL del endpoint del backend
-      .then((response) => setCommits(response.data))
-      .catch((error) => console.error(error));
-  }, []);
-
+  const commits = useCommitHistory();
   return (
-    <div>
-      <h1>Git Commit History</h1>
-      <ul>
+    <div className="commit-history">
+      <h1 className="commit-history__title">Git Commit History</h1>
+      <ul className="commit-history__list">
         {commits.map((commit) => (
-          <li key={commit.sha}>
-            <strong>{commit.author}</strong> - {commit.message}
+          <li key={commit.sha} className="commit-history__item">
+            <div className="commit-history__author">
+              <strong>{commit.author}</strong>
+            </div>
+            <div className="commit-history__message">{commit.message}</div>
+            <div className="commit-history__date">
+              Committed on {formatDate(commit.date)}
+            </div>
           </li>
         ))}
       </ul>
