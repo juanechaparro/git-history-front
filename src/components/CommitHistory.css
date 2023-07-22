@@ -1,0 +1,46 @@
+/* Estilos CSS para el componente CommitHistory */
+.commit-history {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .commit-history__title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .commit-history__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .commit-history__item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .commit-history__author {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .commit-history__message {
+    margin-top: 5px;
+    color: #333;
+  }
+  
+  .commit-history__date {
+    margin-top: 5px;
+    color: #888;
+  }
+  
